@@ -5,11 +5,14 @@
 
 The [ddiLab](http://ddilab.cs.niu.edu) at [Northern Illinois University](http://www.cs.niu.edu) is part of the [Array of Things](https://arrayofthings.github.io) project led by [Argonne National Laboratory](http://www.mcs.anl.gov/project/array-things) and [The University of Chicago](http://www.urbanccd.org); with the goal of involving undergraduate students in research and development.  The ddiLab in addition to participating in the testing and deployment of [AoT Nodes](https://arrayofthings.github.io/node.html), has been working on hardware systems that share in the goals of of the AoT project in the collection of real-time data from the environment, infrastructure sources, and human activity. The team has also been building [jupyter notebooks](http://jupyter.org) for others to learn how to investigate and explore the output of these system.
 
+Notebooks we have built:
+- Introduction to Raspberry Pi
+
 The ddiLab Community Sensing Team:
 - Michael E. Papka
 - James Bonasera
 - Thomas Franczak
-- May Myo Khine
+- May-Myo Khine
 - Kevin White
 - Alex Wills
 
