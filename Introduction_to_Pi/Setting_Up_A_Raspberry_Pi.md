@@ -113,57 +113,88 @@ This will display the IP addresses associated with the Raspberry Pi
 * Type new password for new user and fill the information
 * If process works correctly, there will be a confirmation :  ```Is the information correct?```
 
-# Add new Sudoers
+# Add new sudoers
 * By default, sudoer is only: pi 
 * On terminal: ```Pi:~ $  sudo visudo ```
 * In the file, copy  ```root    ALL=(ALL:ALL) ALL```  under # User privilege specification 
 * Paste the code under it, and change  ```root```  to  ```user_name```  of a new sudoer
+
 > For example:    
 
 ```   
-User privilege specification   
+# User privilege specification   
 root    ALL=(ALL:ALL) ALL   
-user_name   ALL=(ALL:ALL) ALL ``` 
+user_name   ALL=(ALL:ALL) ALL 
+``` 
 
 
 # Delete a user
-* On terminal: ```Pi:~ $     sudo userdel -r user_name```
+* On terminal: 
+
+```
+Pi:~ $sudo userdel -r user_name
+```
 
 # Time and date
 
-* On terminal: ```Pi:~ $ sudo raspi-config```   
-* Select ```4 Localisation Options```
-* Select ```I2 Change Timezone```   
-* Select your ```country``` and your ```the nearest city``` to set up local timezone  
-* Select ```Finish```
-* On terminal: ```Pi:~ $ sudo reboot```
-* On terminal: ```Pi:~ $ date``` to check the current date and time
+* On terminal: 
+* ```
+* Pi:~ $ sudo raspi-config
+* ```   
+
+Select ```4 Localisation Options```
+
+Select ```I2 Change Timezone```   
+
+Select your ```country``` and your ```the nearest city``` to set up local timezone  
+
+Select ```Finish```
+
+Within Terminal Window: ```Pi:~ $ sudo reboot```
+
+Within Terminal Window: ```Pi:~ $ date``` to check the current date and time
 
 # Install Jupyter Notebook & other packages
 
 **Material adapted from: [Install Jupyter Notebook on Pi](http://www.instructables.com/id/Jupyter-Notebook-on-Raspberry-Pi/)**
-* Install matplotlib package for python3
- * On terminal : ```Pi:~ $ sudo apt-get install python3-matplotlib```
-* Install scipy package for python3
- * On terminal : ```Pi:~ $ sudo apt-get install python3-scipy```
-* Upgrade pip command
- * On terminal : ```Pi:~ $ sudo pip3 install --upgrade pip```
-* Install jupyter notebook using pip3
- * On terminal : ```Pi:~ $ sudo pip3 install jupyter```
-* Clean up the sorftware packages 
- * On terminal : ```Pi:~ $ sudo apt-get clean```
-* Reboot the Raspberry Pi 
- * On terminal : ```Pi:~ $sudo reboot```
+
+Install matplotlib package for python3
+Within Terminal Window: ```Pi:~ $ sudo apt-get install python3-matplotlib```
+
+Install scipy package for python3
+Within Terminal Window: ```Pi:~ $ sudo apt-get install python3-scipy```
+
+Upgrade pip command
+Within Terminal Window: ```Pi:~ $ sudo pip3 install --upgrade pip```
+
+Install jupyter notebook using pip3
+Within Terminal Window: ```Pi:~ $ sudo pip3 install jupyter```
+
+Clean up the software packages 
+Within Terminal Window: ```Pi:~ $ sudo apt-get clean```
+
+Reboot the Raspberry Pi 
+Within Terminal Window: ```Pi:~ $sudo reboot```
  
  
-### Run Jupyter Notebook on Raspberry Pi
-* Local
-    * On terminal : ```Pi:~ $ jupyter-notebook```
-* Remote
-    * On terminal1 : ```Pi:~ $ jupyter notebook --no-browser --port=8889```    
-      Then it will print The Jupyter Notebook is running at: http://localhost:8889 /?token=c8ea02070.... [Please note **c8ea02070** is specific to this example and your value will be different]
-    * On terminal2 : ```Pi:~ $ ssh -L 8889:localhost:8889 pi@<IP address>```    
-      Then Copy and paste http://localhost:889 /?token=c8ea02070.... to a browser
+### Run Jupyter Notebook on Raspberry Pi 
+
+Local resource (Raspberry Pi) and use locally
+Within Terminal Window: ```Pi:~ $ jupyter-notebook```
+
+Remote resource (running locally on Raspberry Pi) but accessed from a remote machine
+    
+* on remote machine logged into the Raspberry Pi: 
+
+    ```Pi:~ $ jupyter notebook --no-browser --port=8889```    
+      
+Then it will print *_The Jupyter Notebook is running at: http://localhost:8889 /?token=c8ea02070...._* [Please note **c8ea02070** is specific to this example and your value will be different]
+      
+* in a second remote terminal of your remote machine logged into the Raspberry Pi: 
+
+```Pi:~ $ ssh -L 8889:localhost:8889 pi@<IP address>```    
+      
+Then copy and paste http://localhost:8889/?token=c8ea02070.... to your local browser
       
 # Raspberry Pi Camera
 
@@ -263,7 +294,7 @@ The video may play at a faster speed because of [omxplayer](https://www.raspberr
 # Shut down the Raspberry Pi
 
 If you just pull the plug to turn off the power, this can cause problems with the SD card and file system.      
-And the mess on the moemry card will not be claned up refularly. 
+And the mess on the memory card will not be cleaned up regularly. 
 
 To shut down the Raspberry Pi properly,    
 
