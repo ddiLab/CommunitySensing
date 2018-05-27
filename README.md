@@ -7,6 +7,7 @@ The [ddiLab](http://ddilab.cs.niu.edu) at [Northern Illinois University](http://
 
 Notebooks we have built:
 - Introduction to Raspberry Pi
+- Introduction to Raspberry Pi with Sense HAT
 
 The ddiLab Community Sensing Team:
 - Michael E. Papka
