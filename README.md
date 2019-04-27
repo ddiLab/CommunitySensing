@@ -14,6 +14,9 @@ The ddiLab Community Sensing Team:
 - James Bonasera
 - Thomas Franczak
 - May-Myo Khine
+- Ryan Lewis
+- Matthew Swed
+- Ryan Sy
 - Kevin White
 - Alex Wills
 
